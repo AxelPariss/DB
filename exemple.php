@@ -14,7 +14,7 @@ $DB = new DB(DATABASE_HOST, DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD);
 $DB->setFetchMode(PDO::FETCH_ASSOC);
 
 // Return all users that i have in my db
-$users = $DB->fetch("SELECT username, firstname, lastname, email FROM users", [], true);
+$users = $DB->fetch("SELECT username, firstname, lastname, email FROM users");
 
 // Display each user's informations
 foreach ($users as $key => $user) {
