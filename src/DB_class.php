@@ -59,7 +59,7 @@ class DB{
      * @param bool $all Query with several rows or not
      * @return array|mixed Return data
      */
-    public function fetch($request, $values = null, $all = false) {
+    public function fetch($request, $values = null, $all = true) {
         $results = self::exec($request, $values);
         return ($all) ? $results->fetchAll() : $results->fetch();
     }

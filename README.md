@@ -36,16 +36,16 @@ $DB->setFetchMode(PDO::FETCH_ASSOC);
 ```php
 // @param $request string SQL query
 // @param array|null $values Optional values
-// @param bool $all Query with several rows or not
+// @param bool $all Query with several rows or not (Default true)
 // @return array|mixed Return
-$values = $DB->fetch($request, $values = null, $all = false);
+$values = $DB->fetch($request, $values = null, $all = true);
 
 // Exemple 1
-$values = $DB->fetch("SELECT username, firstname, lastname, email FROM users", [], true); // Return several rows
+$values = $DB->fetch("SELECT username, firstname, lastname, email FROM users"); // Return several rows
 
 // Exemple 2
 $age = 21; // We want only adults
-$values = $DB->fetch("SELECT username, firstname, lastname, email FROM users WHERE age >= ?", [$age], true); // Return several rows of adults
+$values = $DB->fetch("SELECT username, firstname, lastname, email FROM users WHERE age >= ?", [$age]); // Return several rows of adults
 
 // Exemple 3
 $firstname = "John";
@@ -62,7 +62,7 @@ $values = $DB->execute($request, $values = array());
 
 
 // Exemple 1       
-$request = $DB->execute("DELETE FROM users", []); //!\\ Delete all users
+$request = $DB->execute("DELETE FROM users"); //!\\ Delete all users
 
 // Exemple 2
 $firstname = "John";
@@ -77,7 +77,11 @@ v 1.0 13/06/2017
 
 ## Credits
 
-Axel Paris (https://axelparis.fr/github)
+  - Axel Paris (https://axelparis.fr/github)
+
+## Contributor
+
+ - Zao Soula (https://github.com/zarque)
 
 ## License
 
