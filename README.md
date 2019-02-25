@@ -1,24 +1,12 @@
-# DB Class
+# 💎 DB
 
-This class allows you to make requests easier than before by using PDO
+This PHP class allows you to simplify SQL requests (with PDO).
 
-## Installation
+## 📕 Installation
 
 You just have to inlcude the PHP class named DB_class.php (Its recommanded to include it from a folders untitled "src" or "classes" to be organized)
 
-## Usage
-
-You must initialize the class and let's get started !
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
-
-## Documentation
+## 📖 Documentation
 **Initialization**
 ```php
 require 'src/DB_class.php';
@@ -70,12 +58,19 @@ $id = 42;
 $request = $DB->execute("UPDATE users SET firstname = ? WHERE id = ?", [$firstname, $id]);
 ```
 
+## 📝 Contributing
 
-## History
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+## ⏳ History
 
 v 1.0 13/06/2017
 
-## Credits
+## 📖 Credits
 
   - Axel Paris (https://axelparis.fr/github)
 
