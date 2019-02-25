@@ -2,7 +2,7 @@
 
 /**
  * Class DB
- * Allows you to make requests easier than before by using PDO
+ * This PHP class allows you to simplify SQL requests (with PDO)
  *
  * Created by Axel Paris (contact@axelparis.fr)
  */
